@@ -1,9 +1,11 @@
 package db
 
 import (
-	"context"
 	"distate-task/dt/config"
 	"distate-task/dt/logger"
+
+	"context"
+
 	"github.com/jackc/pgx/v4/pgxpool"
 	"go.uber.org/fx"
 )

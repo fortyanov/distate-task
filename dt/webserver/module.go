@@ -1,14 +1,16 @@
 package webserver
 
 import (
-	"context"
 	"distate-task/dt/config"
 	"distate-task/dt/db"
 	"distate-task/dt/logger"
+
+	"context"
+	"net"
+
 	"github.com/fasthttp/router"
 	"github.com/valyala/fasthttp/reuseport"
-	fx "go.uber.org/fx"
-	"net"
+	"go.uber.org/fx"
 )
 
 func Module() fx.Option {

@@ -16,9 +16,6 @@ services:
       POSTGRES_PASSWORD: distate
 
   app:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
     image: distate-task
     restart: always
     ports:

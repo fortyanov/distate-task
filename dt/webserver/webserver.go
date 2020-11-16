@@ -4,10 +4,12 @@ import (
 	"distate-task/dt/config"
 	"distate-task/dt/db"
 	"distate-task/dt/logger"
+
+	"net"
+
 	"github.com/fasthttp/router"
 	"github.com/oklog/run"
 	"github.com/valyala/fasthttp"
-	"net"
 )
 
 type WebServer struct {

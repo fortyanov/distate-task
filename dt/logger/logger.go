@@ -2,11 +2,13 @@ package logger
 
 import (
 	"distate-task/dt/config"
+
 	"fmt"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"path/filepath"
 	"runtime"
+
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 type Logger struct {

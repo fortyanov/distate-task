@@ -4,9 +4,11 @@ import (
 	"distate-task/dt"
 	"distate-task/dt/config"
 	"distate-task/dt/logger"
+
+	"net/http"
+
 	"go.uber.org/fx"
 	"go.uber.org/zap"
-	"net/http"
 )
 
 var (
