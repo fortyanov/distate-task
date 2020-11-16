@@ -1,7 +1,7 @@
 package dt
 
 import (
-	"distate-task/config"
+	"distate-task/dt/config"
 	"distate-task/dt/db"
 	"distate-task/dt/logger"
 	"distate-task/dt/webserver"

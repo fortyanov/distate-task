@@ -1,7 +1,7 @@
 package webserver
 
 import (
-	"distate-task/config"
+	"distate-task/dt/config"
 	"distate-task/dt/db"
 	"distate-task/dt/logger"
 	"github.com/fasthttp/router"

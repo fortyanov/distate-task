@@ -2,7 +2,7 @@ package db
 
 import (
 	"context"
-	"distate-task/config"
+	"distate-task/dt/config"
 	"distate-task/dt/logger"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"go.uber.org/fx"

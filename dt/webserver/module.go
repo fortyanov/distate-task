@@ -2,7 +2,7 @@ package webserver
 
 import (
 	"context"
-	"distate-task/config"
+	"distate-task/dt/config"
 	"distate-task/dt/db"
 	"distate-task/dt/logger"
 	"github.com/fasthttp/router"
@@ -20,7 +20,7 @@ func Module() fx.Option {
 					Log:    &logger.FxLogger{SugaredLogger: l.Named("WebServer").Sugar()},
 					router: router.New(),
 					debug:  cfg.Debug,
-					conn: conn,
+					conn:   conn,
 				}
 				s.RegisterRoutes()
 				s.ln, err = reuseport.Listen("tcp4", net.JoinHostPort(s.Config.Host, s.Config.Port))

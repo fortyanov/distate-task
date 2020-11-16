@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"distate-task/config"
+	"distate-task/dt/config"
 	"fmt"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
