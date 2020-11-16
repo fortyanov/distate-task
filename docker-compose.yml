@@ -1,0 +1,38 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+#    ports:
+#      - 5432:5432
+    networks:
+      - default
+    hostname: db
+#    links:
+#      - app
+    environment:
+      POSTGRES_DB: distate_db
+      POSTGRES_USER: distate_user
+      POSTGRES_PASSWORD: distate
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - default
+    hostname: app
+    links:
+      - db
+    environment:
+      DT_DEBUG: 0
+#      DT_DATABASE_DSN: user=distate_user password=distate host=127.0.0.1 port=5432 dbname=distate_db pool_max_conns=100 statement_cache_mode=describe
+      DT_DATABASE_DSN: user=distate_user password=distate host=db port=5432 dbname=distate_db pool_max_conns=100 statement_cache_mode=describe
+
+networks:
+  default:
